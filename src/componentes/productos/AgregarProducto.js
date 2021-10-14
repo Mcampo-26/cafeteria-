@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
+import Swal from 'sweetalert2'
 
 const AgregarProducto = () => {
   const [nombreProducto, setNombreProducto] = useState("");
@@ -10,7 +11,7 @@ const AgregarProducto = () => {
   const cambiarCategoria = (e) => {
     setCategoria(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // validar los datos
     if (
@@ -33,9 +34,38 @@ const AgregarProducto = () => {
         //nombreProducto,
        // precioProducto,
        // categoria
-       // solo si coincide el nombre del estate con el nom,bre de la variable almacenada ahi
+       // solo si coincide el nombre del estate con el nombre de la variable almacenada ahi
       }
-      console.log(producto)
+      console.log(producto);
+      try {//aca escribo normalmente el codigo de interaccion con la Api
+        const datosEnviar ={
+          method:"POST",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify(producto)
+
+        }
+        const respuesta = await fetch("http://localhost:3004/cafeteria",datosEnviar)
+        console.log(respuesta);
+        if (respuesta.status===201){
+          //mostar un cartel al usuario
+          Swal.fire(
+            'producto agregado',
+            'se ha registrado un producto nuevo',
+            'success'
+          )
+        }
+
+      }catch(error){
+        console.log(error);
+        // se puede mostrar cartel al usuario de que la operacion no se pudo realizar
+        Swal.fire(
+          'ocurrior un errror',
+          'Intentelo en unos minutos',
+          'error'
+        )
+      }
     }
   };
 

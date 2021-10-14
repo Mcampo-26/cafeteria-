@@ -1,16 +1,34 @@
 {
-    "cafeteria": [{
-            "nombreProducto": "medialuna x  unidad",
-            "precioProducto": 40,
-            "categoria": "dulce",
-            "id": 2
-        },
-        {
-            "nombreProducto": "cafe con leche",
-            "precioProducto": 50,
-            "categoria": "bebidaCaliente",
-            "id": 1
-        }
-
-    ]
+  "cafeteria": [
+    {
+      "nombreProducto": "medialuna x  unidad",
+      "precioProducto": 40,
+      "categoria": "dulce",
+      "id": 2
+    },
+    {
+      "nombreProducto": "cafe con leche",
+      "precioProducto": 50,
+      "categoria": "bebidaCaliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "Pan",
+      "precioProducto": 120,
+      "categoria": "Salado",
+      "id": 3
+    },
+    {
+      "nombreProducto": "licuado",
+      "precioProducto": 120,
+      "categoria": "bebibaFría",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Capuccino",
+      "precioProducto": 250,
+      "categoria": "bebidaCaliente",
+      "id": 5
+    }
+  ]
 }
