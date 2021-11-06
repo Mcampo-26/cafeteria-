@@ -1,20 +1,19 @@
-import React from 'react';
-import{ListGroup}from"react-bootstrap";
+import React from "react";
+import { Container, ListGroup } from "react-bootstrap";
+import ItemProducto from "./ItemProducto";
 
-const ListarProductos = () => {
-    return (
-        <div>
-            <h1>Pagina de lista de productos</h1>
-            <ListGroup>
-  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-  <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-  <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-</ListGroup>
-            
-        </div>
-    );
+const ListarProductos = (props) => {
+  return (
+    <Container>
+      <h1 className="text-center my-5">Lista de productos</h1>
+      <ListGroup className="my-5">
+        {
+          props.productosP.map((productoObjeto)=><ItemProducto productoProps={productoObjeto}key={productoObjeto.id}></ItemProducto>)
+        }
+      
+      </ListGroup>
+    </Container>
+  );
 };
 
 export default ListarProductos;

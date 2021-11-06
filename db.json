@@ -29,6 +29,18 @@
       "precioProducto": 250,
       "categoria": "bebidaCaliente",
       "id": 5
+    },
+    {
+      "nombreProducto": "capuccino",
+      "precioProducto": 150,
+      "categoria": "bebidaCaliente",
+      "id": 6
+    },
+    {
+      "nombreProducto": "brownie",
+      "precioProducto": 100,
+      "categoria": "Dulce",
+      "id": 7
     }
   ]
 }

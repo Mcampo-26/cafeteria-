@@ -8,6 +8,7 @@ import Footer from "./componentes/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState,useEffect}from "react";
 
+
 function App() {
   const [productos, setProductos]=useState([]);
   useEffect(()=>{
@@ -35,9 +36,9 @@ function App() {
         </Route>
         <Route exact path="/productos">
           <ListarProductos productosP={productos}></ListarProductos>
-        </Route>
+        </Route> 
         <Route exact path="/productos/nuevo">
-          <AgregarProducto></AgregarProducto>
+          <AgregarProducto consultalistaProductos={consultarApi}></AgregarProducto>
         </Route>
       </Switch>
       <Footer></Footer>
