@@ -1,46 +1,28 @@
 {
   "cafeteria": [
     {
-      "nombreProducto": "medialuna x  unidad",
-      "precioProducto": 40,
-      "categoria": "dulce",
-      "id": 2
-    },
-    {
-      "nombreProducto": "cafe con leche",
-      "precioProducto": 50,
+      "nombreProducto": "rrrrrrr",
+      "precioProducto": 33,
       "categoria": "bebidaCaliente",
-      "id": 1
+      "id": 13
     },
     {
-      "nombreProducto": "Pan",
-      "precioProducto": 120,
-      "categoria": "Salado",
-      "id": 3
-    },
-    {
-      "nombreProducto": "licuado",
-      "precioProducto": 120,
-      "categoria": "bebibaFría",
-      "id": 4
-    },
-    {
-      "nombreProducto": "Capuccino",
-      "precioProducto": 250,
+      "nombreProducto": "eee",
+      "precioProducto": 34,
       "categoria": "bebidaCaliente",
-      "id": 5
+      "id": 14
     },
     {
-      "nombreProducto": "capuccino",
-      "precioProducto": 150,
+      "nombreProducto": "wwwww",
+      "precioProducto": 34,
       "categoria": "bebidaCaliente",
-      "id": 6
+      "id": 15
     },
     {
-      "nombreProducto": "brownie",
-      "precioProducto": 100,
-      "categoria": "Dulce",
-      "id": 7
+      "nombreProducto": "qqqqqq",
+      "precioProducto": 34,
+      "categoria": "bebidaCaliente",
+      "id": 16
     }
   ]
 }
