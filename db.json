@@ -1,28 +1,46 @@
 {
   "cafeteria": [
     {
-      "nombreProducto": "rrrrrrr",
-      "precioProducto": 33,
+      "nombreProducto": "cafe ",
+      "precioProducto": "150",
       "categoria": "bebidaCaliente",
-      "id": 13
+      "id": 17
     },
     {
-      "nombreProducto": "eee",
-      "precioProducto": 34,
+      "nombreProducto": "Capuccino",
+      "precioProducto": 150,
       "categoria": "bebidaCaliente",
-      "id": 14
+      "id": 18
     },
     {
-      "nombreProducto": "wwwww",
-      "precioProducto": 34,
+      "nombreProducto": "Cortado",
+      "precioProducto": "100",
       "categoria": "bebidaCaliente",
-      "id": 15
+      "id": 19
     },
     {
-      "nombreProducto": "qqqqqq",
-      "precioProducto": 34,
+      "nombreProducto": "Licuado",
+      "precioProducto": 400,
+      "categoria": "bebibaFría",
+      "id": 20
+    },
+    {
+      "nombreProducto": "Medialunas",
+      "precioProducto": 90,
+      "categoria": "Dulce",
+      "id": 21
+    },
+    {
+      "nombreProducto": "Tortillas",
+      "precioProducto": 50,
+      "categoria": "Salado",
+      "id": 22
+    },
+    {
+      "nombreProducto": "cafe doble",
+      "precioProducto": 80,
       "categoria": "bebidaCaliente",
-      "id": 16
+      "id": 23
     }
   ]
 }

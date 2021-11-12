@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, ListGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const ItemProducto = (props) => {
   const eliminarProducto = (id) => {
@@ -21,7 +24,7 @@ const ItemProducto = (props) => {
           console.log(URL);
           const respuesta = await fetch(URL, {
             method: "DELETE",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
           });
           if (respuesta.status === 200) {
             //muestro el  cartel al usuario
@@ -49,9 +52,12 @@ const ItemProducto = (props) => {
         </span>
       </p>
       <div>
-        <Button variant="warning" className="me-3">
-          Editar
-        </Button>
+        <Link
+          className="btn btn-warning text-light me-3"
+          to={"/productos/editar/" + props.productoProps.id}
+        >
+          <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>Editar/
+        </Link>
         <Button
           variant="danger"
           onClick={() => eliminarProducto(props.productoProps.id)}

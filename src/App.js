@@ -7,6 +7,8 @@ import Navegacion from "./componentes/common/Navegacion";
 import Footer from "./componentes/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState,useEffect}from "react";
+import EditarProducto from "./componentes/productos/EditarProducto";
+import Error404 from "./componentes/Error404";
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   const consultarApi= async()=>{
     try{
       const respuesta= await fetch(URL);
-      console.log(respuesta);
+      
       if(respuesta.status===200){
         const listaProductos =await respuesta.json();
         setProductos(listaProductos);
@@ -41,6 +43,12 @@ function App() {
         </Route> 
         <Route exact path="/productos/nuevo">
           <AgregarProducto consultalistaProductos={consultarApi}></AgregarProducto>
+        </Route>
+        <Route exact path="/productos/editar/:id">
+          <EditarProducto consultalistaProductos={consultarApi}></EditarProducto>
+        </Route>
+        <Route path='*'>
+        <Error404></Error404>
         </Route>
       </Switch>
       <Footer></Footer>
