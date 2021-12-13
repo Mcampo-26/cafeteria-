@@ -1,12 +1,6 @@
 {
   "cafeteria": [
     {
-      "nombreProducto": "cafe ",
-      "precioProducto": "150",
-      "categoria": "bebidaCaliente",
-      "id": 17
-    },
-    {
       "nombreProducto": "Capuccino",
       "precioProducto": 150,
       "categoria": "bebidaCaliente",

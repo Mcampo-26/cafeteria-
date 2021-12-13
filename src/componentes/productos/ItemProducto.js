@@ -3,7 +3,7 @@ import { Button, ListGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faPencilAlt, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ItemProducto = (props) => {
   const eliminarProducto = (id) => {
@@ -54,15 +54,15 @@ const ItemProducto = (props) => {
       <div>
         <Link
           className="btn btn-warning text-light me-3"
-          to={"/productos/editar/" + props.productoProps.id}
+          to={"/productos/editar/" + props.productoProps._id}
         >
-          <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>Editar/
+          <FontAwesomeIcon icon={faPencilAlt}></FontAwesomeIcon>
         </Link>
         <Button
           variant="danger"
-          onClick={() => eliminarProducto(props.productoProps.id)}
+          onClick={() => eliminarProducto(props.productoProps._id)}
         >
-          borrar
+          <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
         </Button>
       </div>
     </ListGroup.Item>
