@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from 'sweetalert2'
 
-const AgregarProducto = () => {
+const AgregarProducto = (props) => {
   const [nombreProducto, setNombreProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -56,6 +56,7 @@ const AgregarProducto = () => {
             'se ha registrado un producto nuevo',
             'success'
           )
+          props.consultalistaProductos();
         }
 
       }catch(error){
