@@ -37,7 +37,7 @@ const AgregarProducto = (props) => {
        // categoria
        // solo si coincide el nombre del estate con el nombre de la variable almacenada ahi
       }
-      console.log(producto);
+      
       try {//aca escribo normalmente el codigo de interaccion con la Api
         const datosEnviar ={
           method:"POST",
@@ -48,7 +48,7 @@ const AgregarProducto = (props) => {
 
         }
         const respuesta = await fetch(URL,datosEnviar)
-        console.log(respuesta);
+        
         if (respuesta.status===201){
           //mostar un cartel al usuario
           Swal.fire(
@@ -57,10 +57,13 @@ const AgregarProducto = (props) => {
             'success'
           )
           props.consultalistaProductos();
+           // redireccionar
+           props.history.push('/productos');
+
         }
 
       }catch(error){
-        console.log(error);
+        
         // se puede mostrar cartel al usuario de que la operacion no se pudo realizar
         Swal.fire(
           'ocurrior un errror',

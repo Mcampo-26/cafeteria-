@@ -21,7 +21,7 @@ const ItemProducto = (props) => {
         // agregar la logica para borrar el producto
         try {
           const URL = `${process.env.REACT_APP_API_URL}/${id}`;
-          console.log(URL);
+         
           const respuesta = await fetch(URL, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
@@ -37,7 +37,7 @@ const ItemProducto = (props) => {
             props.consultarApi();
           }
         } catch (error) {
-          console.log(error);
+         
           Swal.fire("ocurrior un errror", "Intentelo en unos minutos", "error");
         }
       }

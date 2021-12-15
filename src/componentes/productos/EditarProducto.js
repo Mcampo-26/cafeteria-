@@ -25,7 +25,7 @@ const EditarProducto = (props) => {
         SetProducto(productoSolicitado);
       }
     } catch (error) {
-      console.log(error);
+      
       // mostrar un mensaje de error
     }
   }, []);
@@ -65,12 +65,14 @@ const EditarProducto = (props) => {
             'se acualizaron los datos del producto',
             'success'
           )
+           
             props.consultalistaProductos();
+           // redireccionar
             props.history.push('/productos');
 
         }
       }catch(error) {
-        console.log(error);
+        
       
       }
     } else{
